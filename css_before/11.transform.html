@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      .box{
+        width: 100px;
+        height: 120px;
+        background-color: brown;
+        margin-bottom: 20px;
+       
+      }
+      .box1{
+        transform: translate(100px,-100px);
+      }
+      .box2{
+       transform: scale(1.2);
+       transform: rotate(45deg);
+      }
+      .box5{
+        transform: translate(100px,100px) scale(2) rotate(45deg)
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+  </body>
+</html>
+
+<!-- Transform에 대해서!
+
+$$ 다양한 옵션
+
+translate(x,y) -> 좌표의 위치를 바꿈
+
+translate( x , y) -> x축 오른쪽으로 이동, y축 아래쪽으로 이동
+translate( -x , -y) -> x축 왼쪽으로 이동, y축 위쪽으로 이동
+transform: scale(1.2); -> 사이즈를 늘린다 1.2배 
+transform: rotate(45deg) -> 회전
+
+transform: translate(100px,100px) scale(2) rotate(45deg) 간단하게 합쳐쓰가
+-->

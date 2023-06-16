@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block vs Inline vs Inline-Block</title>
+   <style>
+    p,
+    span{
+      background-color: yellow;
+    }
+    p{ 
+      display: inline;
+    }
+    span{
+      display: block;
+    }
+    .inlineBlock{ 
+      display: inline-block;
+    }
+   </style>
+
+  </head>
+  <body>
+    <p>기본적인 블럭 요소인 p</p>
+    <p>기본적인 블럭 요소인 p</p>
+    <span>하지만</span>
+    <span class="inlineBlock"> 스판은 아니지</span>
+  </body>
+</html>
+
+<!-- p태그 -> 한줄에 다 차지하면 블록 -> 차지해서 공간이 없으니까 세로로 쌓임-> 인라인으러 바꿀수있음
+span태그 => 딱 요소만 차지하면 인라인  -->
+<!-- inline-block -> 한줄에 하나씩 차지는 하지만 인라인일때처럼 실제 요소의 크기는 content만큼만 커짐 -->

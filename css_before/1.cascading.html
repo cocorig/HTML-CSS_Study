@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cascading</title>
+    <style>
+      h1{
+        font-size: 16px;
+      }
+    button{   /* 버튼태그의 기본 색상을 지정 */
+        background-color: aqua;
+        color: blanchedalmond;
+      }
+      .special{  /* 그 중에서도 클래스가 special인 버튼이 우선순위가 높기때문에 블랙*/
+        background-color: black;
+        color: pink;   /*우선순위가 높은태그에 없는 속성이있다면 적용된다!*/
+      } 
+      #primary{     /*special 클래스 중에서도 특정한 id값을 가진 버튼이 있다면 브라운적용*/
+        background-color: brown;
+       
+      }
+      .special{  /* 동일한 레벨이라면 나중에 적용한게 우선순위가 높다!!.  예전의 배경 덮어씌움 */
+        background-color: rgb(178, 19, 112); 
+        color: black;  /*만약 여기서 color를 준다면 순위가 높기때문에 핑크사라지고 적용*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cascading을 확인하는 버튼들</h1>
+    <button>태그 버튼</button>
+    <button class="special">클래스 버튼</button>
+    <button class="special">클래스 버튼</button>
+    <button class="special" id="primary">클래스+아이디 버튼</button>
+  </body>
+</html>
+
+
+
+<!-- 정리! 1.마자막에 정의된 특정한 스타일에 한해서 덮어씌어진다. 2.별도로 재정의를 하지않았다면 이전의 정의한게 우효하다! -->
+<!-- 우선순위
+아이디>클래스>태그> 
+
+
+## 1순위 사용자가 브라우저에서 지정한 스타일
+
+**구체적**일수록 높음 → 태그 < .클래스 < #아이디 < 인라인 < !important(강압적 내가 젤 중요해. 사용안하는게 좋음!)
+
+동일한 레벨에서는 나중에 적성한 스타일이 우선순위가 높음!
+
+2순위 우리가 코드상에서 지정한 스타일
+
+3순위 브라우저에서 지정한 스타일
+
+
+
+-->

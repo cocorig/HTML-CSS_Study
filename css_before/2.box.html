@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+        background-color: chocolate;
+      }
+      .box1 {
+        padding: 20px;
+        border: 5px solid black;
+        box-sizing: border-box;
+      }
+      .box3{
+        padding: 20px;
+        border: 5px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">나는 border-box</div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </body>
+</html>
+
+<!-- 내가 지정한 박스 사이즈가 padding,border속성추가했다고 사이즈가 커져버렸다!
+내가 지장한 사이즈로 하고싶다면? 커져버리지않게 방지하고싶다면?
+box-dizing : border-box => 내가 지정한 사이즈 = padding,border까지합한 사이즈
+협업에서 일할땐 border-box 주로 사용힌다.
+box-sizing을 하면 전체크기는 내가 지정한 크기지만 실제 contents는 =  내가지정한 사이즈 -  padding+bordet이다.
+content =  100px - 50px =  50px
+ -->
+
+ <!-- content-box로 지정할 경우 content를 100 x 100으로 지정하는거와 동일하므로 
+바깥쪽에 padding과 border가 커짐 -> 문서 전체의 flow가 변경될수있다. -> padding,border때문에 다른 요소들이 밀려남.
+border-box는 padding과 border를 합한 사이즈를 100 100으로 정의하는것이다.
+그러므로 padding과 border를 줬을때 100사이즈를 유지해야하므로 안쪽으로 넣어짐! -> 실제 안쪽에 넣었던 요소들이 작아짐. -->

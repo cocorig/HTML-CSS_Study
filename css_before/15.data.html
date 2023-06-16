@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Attributes</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+        margin-bottom: 50px;
+      }
+      div[data-index="1"]{
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-index="1" data-display-name="hayeon">하연!!</div>
+    <div data-index="2" data-display-name="cocorig"></div>
+    <span>하연!!</span>
+    <script>
+      const hayeon = document.querySelector('div[data-display-name="cocorig"]');
+      console.log(hayeon.dataset);
+      console.log(hayeon.dataset.displayName);
+    </script>
+  </body>
+</html>
+
+
+<!-- 나만의 속성만들기 -->
+<!-- --data-이름 -->
+<!-- 
+displayName === -display-name  같은이름,중간에 대문자로, - 없이 -->

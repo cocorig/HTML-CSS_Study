@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+    <style>
+   
+      .box {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+      }
+      .box1{
+        background-image: url(' https://media.swncdn.com/cms/BST/67912-gettyimages-817147678-kieferpix.1200w.tn.webp' );
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .box2{
+        background: center/cover no-repeat url(' https://media.swncdn.com/cms/BST/67912-gettyimages-817147678-kieferpix.1200w.tn.webp');
+      }
+      .box3{
+        background: center/cover fixed url(' https://media.swncdn.com/cms/BST/67912-gettyimages-817147678-kieferpix.1200w.tn.webp');
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </body>
+</html>
+
+<!-- background-repeat:no-repeat;
+이미지가 커져도 반복하지않을꺼야
+
+background-repeat: repeat;
+이미지가 계속 반복되면서 끊긴듯이 나옴.
+
+background-position: center;
+이미지를 중간으로 오도록, 이미지가 실제 보여주는것보다 크다면 이미지의 중간을 중점으로 나오게하는것
+
+background-size: cover;
+이미지를 반응적으로 만들수있다. 중간을 기점으로 반응적으로 이미지가 변경됨 -->
+
+
+<!-- 간략하게 
+background: center/cover no-repeat url() -->
