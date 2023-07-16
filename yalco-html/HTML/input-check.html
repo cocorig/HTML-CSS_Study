@@ -1,0 +1,72 @@
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>체크 관련 인풋 타입</title>
+  </head>
+  <body>
+    <form action="#">
+      <p>checkbox 버튼</p>
+
+      <label for="cbIp">유기농</label>
+      <input type="checkbox" name="" id="cbIp" checked>
+
+      <p>radio 버튼</p>
+
+      <!-- name을 똑같이 정해서 그룹을 만든다, 그룹 중 하나만 선택 가능  -->
+      <input
+        type="radio"
+        name="fruit"
+        id="f_apple"
+        value="apple"
+        checked
+      >
+      <label for="f_apple">사과</label>
+      <!--  -->
+      <input
+        type="radio"
+        name="fruit"
+        id="f_grape"
+        value="grape"
+      >
+      <label for="f_grape">포도</label>
+    <!--  -->
+      <input
+        type="radio"
+        name="fruit"
+        id="f_orange"
+        value="orange"
+      >
+      <label for="f_orange">오렌지</label>
+      <br>
+    <!--  -->
+      <input
+        type="radio"
+        name="vege"
+        id="v_carrot"
+        value="carrot"
+        checked
+      >
+      <label for="v_carrot">당근</label>
+    <!--  -->
+      <input
+        type="radio"
+        name="vege"
+        id="v_tomato"
+        value="tomato"
+      >
+      <label for="v_tomato">토마토</label>
+    <!--  -->
+      <input
+        type="radio"
+        name="vege"
+        id="v_eggplant"
+        value="eggplant"
+      >
+      <label for="v_eggplant">가지</label>
+
+    </form>
+  </body>
+  </html>

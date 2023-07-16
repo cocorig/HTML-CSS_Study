@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://showcases.yalco.kr/html-css/01-06/table.css">
+    <title>표 사용하기</title>
+</head>
+<body>
+  <table>
+    <caption>1에서 9까지의 숫자들</caption>
+    <!-- 세개의 행  -->
+    <tr>
+      <!-- 첫번째 행의 데이터 셀 -->
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </table>
+
+    <table>
+      <!-- 테이블의 헤더 부분	<tbody> 앞에 와야 함 -->
+      <thead>
+        <tr>
+          <!-- 열 또는 행의 헤더, 폰트가 굵게 나옴 -->
+          <th scope="col">과목</th>
+          <th scope="col">월</th>
+          <th scope="col">화</th>
+          <th scope="col">수</th>
+        </tr>
+      </thead>
+      <!-- 테이블의 본문, 본 내용을 담음 -->
+      <tbody>
+        <!-- 하나의 행 -->
+        <tr>
+          <th scope="row">HTML</th>
+          <td>60분</td>
+          <td>60분</td>
+          <td>0분</td>
+        </tr>
+
+        <tr>
+          <th scope="row">CSS</th>
+          <td>60분</td>
+          <td>60분</td>
+          <td>0분</td>
+        </tr>
+
+        <tr>
+          <th scope="row">JS</th>
+          <td>60분</td>
+          <td>60분</td>
+          <td>0분</td>
+        </tr>
+      </tbody>
+
+  
+      <!-- 테이블의 푸터 부분 , <tbody> 뒤에 와야 함-->
+
+        <tfoot>
+          <tr>
+            <th scope="row">총 시간</th>
+            <td>60분</td>
+            <td>90분</td>
+            <td>120분</td>
+          </tr>
+        </tfoot>
+    </table>
+
+
+    <!-- 병합 -->
+    <table>
+      <tr>
+        <td>1</td>
+        <!-- 두개의 칸을 차지하겠다, 가로 -->
+        <td colspan="2">2</td>
+        <td>1</td>
+      
+      </tr>
+      <tr>
+    <!-- 세로로 3칸 차지하겠다. -->
+        <td rowspan="3">3</td>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+
+      </tr>
+      <tr>
+  
+        <td>3</td>
+        <!-- 이 위치에서 차지 시작 -->
+        <td rowspan="2" colspan="2">3</td>
+    
+      </tr>
+      <tr>
+  
+        <td>4</td>
+  
+      </tr>
+    </table>
+<!--  -->
+
+<table>
+  <thead>
+    <!-- 표에 열을 묶어서 속성 부여	<caption>보다 뒤, 그 외 요소보다 앞에 와야 함 ,css로 공통 속성을 넣어주고 싶을때-->
+    <colgroup>
+      <col class="weekend">
+      <!-- 열의 묶음	span 속성으로 열 수 지정 -->
+      <col span="5">
+      <col class="weekend">
+    </colgroup>
+    <tr>
+      <th scope="col">일</th>
+      <th scope="col">월</th>
+      <th scope="col">화</th>
+      <th scope="col">수</th>
+      <th scope="col">목</th>
+      <th scope="col">금</th>
+      <th scope="col">토</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--  -->
+
+<table>
+  <caption>2023 학년도 대학수능능력시험 성적통지표</caption>
+  <colgroup>
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col">구분</th>
+      <th scope="col" rowspan="2">한국사 영역</th>
+      <th scope="col">국어 영억</th>
+      <th scope="col">수학 영역</th>
+      <th scope="col" rowspan="2">영어 영역</th>
+      <th scope="col" colspan="2">탐구 영역</th>
+      <th scope="col">제 2 외국어/한문 영역</th>
+    </tr>
+    <tr>
+      <th scope="row">선택 과목</th> 
+      <th scope="col"  >화법과 작문</th>
+      <th scope="col" >확률과 통계</th>
+      <th scope="col" >생활과 윤리</th>
+      <th scope="col" >지구과학1</th>
+      <th scope="col">독일어</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr>  
+      <th>표준점수</th>
+      <td rowspan="2"></td>
+      <td>131</td>
+      <td>137</td>
+      <td rowspan="2"></td>
+      <td>53</td>
+      <td>64</td>
+      <td rowspan="2"></td>
+    </tr>
+    <tr>
+      <th>백분위</th>
+      <td>93</td>
+      <td>95</td>
+      <td>75</td>
+      <td>93</td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+      <tr>
+        <th>등급</th>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+        <td>1</td>
+        <td>1</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+  </tfoot>
+</table>
+
+</body>
+</html>

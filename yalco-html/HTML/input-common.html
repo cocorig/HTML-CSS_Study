@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인풋 요소 공통속성</title>
+</head>
+<body>
+<!-- value : defalut값 지정할 수 있다. 예를들어 사용자의 계정설정에서 내 아이디부분이 전에 입력한 대로 떠서 수정하곳 샆은 부분만 수정하도록 하고 싶을때 사용할 수도 있다. -->
+
+<!-- autofocus : 클릭하지 않아도 페이지 로드시 자동으로 선택되도록 포커스 -->
+<!-- readonly : 수정할 수 없고, 읽기만 가능 ,제출시 값이 전송됨  -->
+<!-- required : 필수 값, 입력하지 않고 제출할 수 없다. -->
+<!-- disabled : 입력불가, 제출시 전송하지 않는 값 -->
+<h2>인풋 요소 공통(대부분) 속성</h2>
+
+<form action="#">
+  <label for="valueIP">value</label>
+  <input type="text" value="지정됨" autofocus >
+
+  <label for="fruits">value</label>
+  <input type="text" value="입력불가" disabled >
+  
+  <!-- radio buttons -->
+  <input type="radio" name="fruits" id="apple">
+  <label for="apple">사과</label>
+
+  <input type="radio" name="fruits" id="grape">
+  <label for="grape">포도</label>
+
+  <input type="radio" name="fruits" id="orange" disabled>
+  <label for="orange">오렌지</label>
+
+</form>
+
+
+</body>
+</html>

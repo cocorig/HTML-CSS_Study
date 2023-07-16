@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타 인풋태그</title>
+</head>
+<body>
+ <h1>기타 인풋 타입</h1>
+
+    <form action="#">
+      
+      <label for="fileIP">파일</label>
+      <input
+          type="file"
+          id="fileIP"
+          accept="image/png, image/jpeg"
+          multiple
+          >
+      <!-- 굳이 사용자에 안보여줘도 되는 정보를 안보이게 처리 -->
+      <label for="hdnIp">hidden</label> <br>
+        <input
+          id="hdnIp"
+          type="hidden"
+        >
+    </form>
+    <form action="#">
+      
+      <label for="emailIP">이메일</label>
+      <input type="email" name="email" id="emailIP">
+      <button type="submit">제출</button>
+    </form>
+</body>
+</html>

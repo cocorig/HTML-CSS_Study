@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 관련 인풋 타입</title>
+</head>
+<body>
+    <h2>숫자 관련 인풋 타입</h2>
+
+    <label for="numIp">number</label>
+    <input 
+        id="numIp" 
+        type="number" 
+        min="1" 
+        max="10"
+    >
+
+    <label for="rangeIp">range</label>
+    <input id="rangeIp" type="range" step="10">
+
+    <label for="dateIp">date</label>
+    <input 
+        id="dateIp"
+        type="dateIp"
+        min="2020-01-01"
+        max="2030-12-31"
+    >
+
+    <label for="start">Start month:</label>
+
+    <input 
+        type="month" 
+        id="start" 
+        name="start"
+        min="2018-03" 
+        value="2018-05"
+    >
+</body>
+</html>

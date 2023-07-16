@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자로부터 입력 받기2</title>
+</head>
+<body>
+ <h2>텍스트 관련 인풋 타입</h2>
+
+ <form action="#">
+
+  <label for="txtIp">text</label>
+  <input 
+    id="txtIp" 
+    type="text" 
+    placeholder="5자 이하" 
+    maxlength="5"
+  >
+
+  <label for="pwdIp">password</label>
+  <input 
+    id="pwdIp" 
+    type="password" 
+    placeholder="4자 이상"  
+    minlength="4"
+  >
+  
+  <label for="srchIp">search</label>
+  <input id="srchIp" type="search">
+
+  <label for="tlIp">tel</label>
+  <input id="tlIp" type="tel">
+
+  <button type="submit">제출</button>
+</form>
+</body>
+</html>

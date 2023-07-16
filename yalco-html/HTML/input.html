@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자로부터 입력받기 1</title>
+</head>
+<body>
+
+  <form autocomplete="off">
+    
+    <fieldest>
+      <legend>반장</legend>
+      <label for="name-1">이름</label>
+      <input id="name-1" type="text" name="my-name">
+      <label  for="age-1">나이</label>
+      <input id="age-1" type="number" name="my-age" >
+      <button type="submit">제출</button>
+      <button type="reset">초기화</button>
+    </fieldest>
+
+    <!-- 폼 태그 내 입력요소와 라벨들을 그룹화  -->
+    <fieldest>
+      <!-- 필드셋 요소의 제목 , 설명 -->
+      <legend>부반장</legend>
+      <label for="name-2">이름</label>
+      <input id="name-2" type="text" name="my-name">
+      <label  for="age-2">나이</label>
+      <input id="age-2" type="number" name="my-age" >
+      <button type="submit">제출</button>
+      <button type="reset">초기화</button>
+    </fieldest>
+  
+  </form>
+
+
+
+
+  <form>
+    <fieldset>
+      <legend>반장</legend>
+
+      <label for="name_1">이름</label>
+      <input id="name_1" name="name_1" type="text">
+      <br><br>
+
+      <label for="age_2">나이</label>
+      <input id="age_1" name="age_1" type="number">
+
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend>부반장</legend>
+
+      <label for="name_2">이름</label>
+      <input id="name_2" name="name_2" type="text">
+      <br><br>
+
+      <label for="age_2">나이</label>
+      <input id="age_2" name="age_2" type="number">
+
+    </fieldset>
+    <br>
+
+    <fieldset form="classForm" disabled>
+      <legend>서기</legend>
+
+      <label for="name_3">이름</label>
+      <input id="name_3" name="name_3" type="text">
+      <br><br>
+
+      <label for="age_3">나이</label>
+      <input id="age_3" name="age_3" type="number">
+    </fieldset>
+  </form>
+</body>
+</html>
