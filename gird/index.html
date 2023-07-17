@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid demo</title>
+    <!-- <link rel="stylesheet" href="./basic-style.css">
+    <link rel="stylesheet" href="./gird.css"> -->
+    <link rel="stylesheet" href="./grid-img.css">
+    <style>
+        body{
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 100px auto 50px;
+            grid-template-areas: 
+            'header header'
+            'main  side'
+            'footer footer';
+        }
+        header{
+            grid-area: header;
+            background-color: rgb(148, 215, 193);
+        }
+        main{
+            grid-area: main;
+            background-color: rgb(236, 238, 237);
+        }
+
+        aside{
+            grid-area: side;
+            background-color: rgb(161, 170, 167);
+        }
+        footer{
+            grid-area: footer;
+            background-color: rgb(70, 171, 138);
+        }
+        header,
+        main,
+        aside,
+        footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+  <!--<div class="container">
+  <div class="item color1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, necessitatibus obcaecati adipisci nulla ipsum temporibus deleniti, nam tempora repudiandae sapiente saepe incidunt ipsam corporis consectetur inventore rem corrupti amet omnis.</div>
+  <div class="item color2 item2">Item2</div>
+  <div class="item color3">Item3</div>
+  <div class="item color4">Item4</div>
+  <div class="item color5">Item5</div>
+  <div class="item color1">Item6</div>
+  <div class="item color2">Item7</div>
+  <div class="item color3">Item8</div>
+  <div class="item color4">Item9</div>
+  <div class="item color5">Item10</div> -->
+  <header>
+    header
+  </header>
+  <main>
+    <section class="container">
+        <img  class="image image1"
+          src="https://images.unsplash.com/photo-1573487750568-873db7032d99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8aG1lbnZRaFVteE18fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=60" alt="img">
+      
+        <img  class="image image2"
+          src="https://images.unsplash.com/photo-1563212107-214cffa1f420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8aG1lbnZRaFVteE18fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=60" alt="img">
+      
+        <img  class="image image3"
+          src="https://images.unsplash.com/photo-1563212107-1f2957a74e69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDl8aG1lbnZRaFVteE18fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=60" alt="img">
+      
+        <img  class="image image4"
+          src="https://images.unsplash.com/photo-1573487849427-587d8d9b5f73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDF8aG1lbnZRaFVteE18fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=60" alt="img">
+      
+        <img  class="image image5"
+          src="https://images.unsplash.com/photo-1573487824177-91ebd4b98d69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8aG1lbnZRaFVteE18fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=60" alt="img">
+      
+          <img  class="image image6"
+          src="https://images.unsplash.com/photo-1681490443369-08969b7ee129?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=60" alt="img">
+      
+          <img  class="image image7"
+          src="https://images.unsplash.com/photo-1686842937093-179e9fcd8921?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDR8YkRvNDhjVWh3bll8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=60" alt="img">
+      
+    </section>
+  </main>
+  <aside>side</aside>
+  <footer>footer</footer>
+ <!-- </div> -->
+</body>
+</html>
