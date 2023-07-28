@@ -1,0 +1,184 @@
+/* reset */
+body{
+  margin: 0;
+}
+h1{
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+strong{
+  font-weight: normal;
+}
+:root{
+  --primary-color : saddlebrown;
+  --secondary-color:  burlywood;
+}
+/* layout */
+
+.center{
+
+  /* contents크기만큼 줄어든다 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+/* css */
+body{
+  
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  font-family: 'arial';
+}
+/* cow */
+.cow{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  width: 300px;
+  /* 높이 값 안주고 내부여백을 아래만 주는 방법  */
+  padding-bottom: 30px;
+  margin: 0 auto;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  box-shadow: inset 0 0 100px currentColor;
+  /* animation: size 0.6s infinite alternate; */
+}
+.horn{
+  background-color: rgb(255, 255, 255);
+  height: 80px;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+ /* 양 옆으로 늘어난다 */
+  margin: 0 -40px;
+              /* 안쪽으로,x, y, 블러 , 색 */
+  box-shadow: inset 0 0 20px rgb(0, 0, 0, 0.8);
+
+}
+.horn::before{
+  content: ' ';
+  /* 인라인이기 때문에 부모크기만큼 꽉차게 만듬 */
+  display: block;
+  height: 40px;
+  border-bottom-left-radius: 120px;
+  border-bottom-right-radius: 120px;
+  background-color: var(--primary-color);
+}
+.horn::after{
+  content: ' ';
+  display: block;
+  height: 60px;
+  background-color: rosybrown;
+  margin: 0 60px;
+  transform: translateY(-10px);
+  border-radius: 12px;
+  /*y좌표를 -로 주면 아래부터 그림자 , 블러효과가 약해질수록 선면 */
+  box-shadow: inset 0 -20px 5px rgb(0,0,0,0.2)
+}
+
+.eyes{
+  /* double: 둘로 나눠짐 */
+  border-top:  30px double ;
+  /* left-right 적용 */
+  border-radius: 20px;
+  margin: 20px 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.eyes::before,
+.eyes::after{
+  /* 인라인 */
+  content: ' ';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+                  /* x,y좌표 */
+  box-shadow: inset 0 -6px 0 10px currentColor;
+ 
+}
+
+
+.nose{
+
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: var(--secondary-color);
+  border-radius: 40px;
+  margin: 0 -20px;
+}
+
+.nose::before,
+.nose::after{
+  content: ' '; 
+  width: 30px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+
+}
+
+.mouth{
+  background-color: var(--secondary-color);
+  height: 40px;
+  margin: 0 40px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 10px 10px;
+  position: relative;
+
+}
+.mouth::after{
+  content: '';
+  background-color: rgb(238, 113, 113);
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  margin: 0 70px;
+  transform: translateY(100%);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom:  20px solid var(--secondary-color);
+  box-shadow: inset 0 0  10px rgb(0,0,0,0.6);
+  /* animation: eat 1s infinite alternate; */
+}
+
+/* 애니메이션 */
+
+@keyframes size {
+  0%{
+    transform: scale(0.8) rotate(-10deg);
+  }
+  100%{
+    transform: scale(1)  rotate(10deg);
+  }
+}
+@keyframes eat {
+  0%{
+    height: 0;
+  }
+  100%{
+   height: 40px;
+  }
+}
+.title{
+  line-height: 1;
+  font-size: 100px;
+  padding: 40px 0;
+}
+.title strong{
+  font-weight: bold;
+}
+

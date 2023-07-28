@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 단위 demo</title>
+   <style>
+
+    h1{
+      display: inline-block;
+      font-size: 5em;
+      background-color: pink;
+      /* 80px */
+      padding: 1em;
+    }
+    /*  padding은 고정 값이기 때문에 폰트사이즈가 작아질때도 padding이 너무 큼  */
+    /* padding도 font-size에 맞게 변경이 돼야한다면 em */
+    @media screen and (max-width : 780px) {
+      h1{
+        /* padding은 48px  유동적으로 바뀜*/
+        font-size: 3em;
+      }
+    }
+    @media screen and (max-width : 680px) {
+      h1{
+          /* padding은 24px */
+        font-size: 1.5em;
+      }
+    }
+   </style>
+</head>
+<body>
+
+   <h1>Hello, Ha yeon!!</h1>
+
+</body>
+</html>
